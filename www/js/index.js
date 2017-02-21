@@ -21,7 +21,7 @@ var isWebkit = (agent.indexOf("AppleWebKit") > 0);
 var isIPad = (agent.indexOf("iPad") > 0);
 var isIOS = (agent.indexOf("iPhone") > 0 || agent.indexOf("iPod") > 0);
 var isAndroid = (agent.indexOf("Android") > 0);
-var isWindows = (cordova.platformId.localeCompare("windows") == 0);
+var isWindows = 0;
 var deviceWidth = window.orientation == 0 ? window.screen.width : window.screen.height;
 deviceWidth = deviceWidth / window.devicePixelRatio;
 var isSmallScreen = (screen.width < 767 || (isAndroid && deviceWidth < 450));
@@ -593,7 +593,7 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function () {
-        log("bindEvents");
+        log("bindEvents"); alert();
         document.addEventListener('deviceready', this.onDeviceReady, false);
         document.addEventListener("resize", adjustCardHolder, false);
         window.addEventListener("resize", adjustCardHolder, false);
@@ -603,7 +603,7 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function () {
-        try {
+        try { 
             log("onDeviceReady");
             checkConnection();
             // Custom Settings
