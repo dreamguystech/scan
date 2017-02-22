@@ -612,7 +612,8 @@ var app = {
             });
             window.shouldRotateToOrientation = function (degrees) {
                 return true;
-            }
+            } 
+			alert(1);
             $("#driver-license-btn").click(driverLicenseAction);
             $("#passport-btn").click(passportAction);
             $("#medical-insurance-btn").click(medicalInsuranceAction);
