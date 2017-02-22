@@ -559,7 +559,7 @@ var showCameraInterfaceDLBack = function () {
 
 
 var activateAction = function () {
-	log('activateAction');alert(11);
+	log('activateAction');
     AcuantMobileSDK.activateLicenseKey(success, failure, licenseKey);
 };
 var getLicenseKey = function () {
@@ -636,7 +636,7 @@ var app = {
             	AcuantMobileSDK.setCanCropBarcode(success, failure, false);
             	AcuantMobileSDK.setCanShowMessage(success, failure, false);
             	AcuantMobileSDK.cameraPrefersStatusBarHidden(success, failure, false);
-            	AcuantMobileSDK.enableLocationTracking(null,null);alert(1);
+            	AcuantMobileSDK.enableLocationTracking(null,null);
             log("end onDeviceReady");
         } catch (err) {alert(err.message);
             log("onDeviceReady: " + err.message);
