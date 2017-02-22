@@ -593,16 +593,16 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function () {
-        log("bindEvents"); 
+        log("bindEvents");  alert(1);
         document.addEventListener('deviceready', this.onDeviceReady, false);
         document.addEventListener("resize", adjustCardHolder, false);
-        window.addEventListener("resize", adjustCardHolder, false);
+        window.addEventListener("resize", adjustCardHolder, false);alert(12);
     },
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
-    onDeviceReady: function () {
+    onDeviceReady: function () { alert(22);
         try { 
             log("onDeviceReady");
             checkConnection();
@@ -613,7 +613,7 @@ var app = {
             window.shouldRotateToOrientation = function (degrees) {
                 return true;
             } 
-			alert(1);
+			
             $("#driver-license-btn").click(driverLicenseAction);
             $("#passport-btn").click(passportAction);
             $("#medical-insurance-btn").click(medicalInsuranceAction);
@@ -638,7 +638,7 @@ var app = {
             	AcuantMobileSDK.cameraPrefersStatusBarHidden(success, failure, false);
             	AcuantMobileSDK.enableLocationTracking(null,null);
             log("end onDeviceReady");
-        } catch (err) {
+        } catch (err) {alert(err.message);
             log("onDeviceReady: " + err.message);
         }
     }
