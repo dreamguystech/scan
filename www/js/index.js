@@ -593,19 +593,19 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function () {
-        log("bindEvents");  alert(1);
+        log("bindEvents");  
         document.addEventListener('deviceready', this.onDeviceReady, false);
         document.addEventListener("resize", adjustCardHolder, false);
-        window.addEventListener("resize", adjustCardHolder, false);alert(12);
+        window.addEventListener("resize", adjustCardHolder, false);
     },
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
-    onDeviceReady: function () { alert(22);
+    onDeviceReady: function () { 
         try { 
             log("onDeviceReady");
-            checkConnection();
+            //checkConnection();
             // Custom Settings
             $('#progress_modal').nsProgress({
                 img_path: 'img'
@@ -629,14 +629,14 @@ var app = {
             });
 
             licenseKey = localStorage.getItem("license-key");
-            $("#license-key").val(licenseKey);
+            $("#license-key").val(licenseKey);alert($("#license-key").val());
             	AcuantMobileSDK.initAcuantMobileSDK(success, failure, licenseKey, null);
             	AcuantMobileSDK.stringForWatermarkLabel(success, failure, "Powered By Acuant");
             	//set Customization methods
             	AcuantMobileSDK.setCanCropBarcode(success, failure, false);
             	AcuantMobileSDK.setCanShowMessage(success, failure, false);
             	AcuantMobileSDK.cameraPrefersStatusBarHidden(success, failure, false);
-            	AcuantMobileSDK.enableLocationTracking(null,null);
+            	AcuantMobileSDK.enableLocationTracking(null,null);alert(1);
             log("end onDeviceReady");
         } catch (err) {alert(err.message);
             log("onDeviceReady: " + err.message);
