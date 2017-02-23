@@ -238,7 +238,7 @@ var loadResultScreen = function () {
     adjustCardHolder();
 };
 
-var success = function (data) {
+var success = function (data) { alert(1);
     log("success: " + JSON.stringify(data));
     if (typeof data === 'object') {
         if (data.id == 'mobileSDKWasValidated') {
@@ -339,8 +339,8 @@ var success = function (data) {
         }
     }
 };
-var failure = function (data) {
-    log("failure: " + JSON.stringify(data));
+var failure = function (data) { 
+    log("failure: " + JSON.stringify(data));alert(JSON.stringify(data));
     if (data.errorType) {
         if (data.id == "didFailWithError") {
             navigator.notification.alert(
@@ -496,8 +496,8 @@ var showCameraInterfaceDLBack = function () {
 var activateAction = function () {
     log('activateAction');
     AcuantMobileSDK.activateLicenseKey(success, failure, licenseKey);
-	alert(success);alert(failure);
-	/*var success = function (data) {  alert("success: " + JSON.stringify(data));
+	//alert(success);alert(failure);
+	/*var success = function (data) {  alert("success: ");
 
         if (data.id == 'mobileSDKWasValidated'){
 
