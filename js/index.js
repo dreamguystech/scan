@@ -495,7 +495,7 @@ var showCameraInterfaceDLBack = function () {
 
 var activateAction = function () {
     log('activateAction');
-    AcuantMobileSDK.activateLicenseKey(success, failure, licenseKey);
+    alert(AcuantMobileSDK.activateLicenseKey(success, failure, licenseKey));
 	var success = function (data) { alert(data.id);
         if (data.id == 'mobileSDKWasValidated'){
 

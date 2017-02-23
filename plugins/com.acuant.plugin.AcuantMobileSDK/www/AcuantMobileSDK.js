@@ -278,7 +278,7 @@ cordova.define("com.acuant.plugin.AcuantMobileSDK.AcuantMobileSDK", function(req
             });
             return;
         }
-        if (isWindows) { alert(1);
+        if (isWindows) { 
             var promise = AcuantWinRT.API.ActivateLicenseKey.activateLicKey(licenseKey);
             promise.then(function (result) {
                 var data = JSON.parse(result);
@@ -290,8 +290,8 @@ cordova.define("com.acuant.plugin.AcuantMobileSDK.AcuantMobileSDK", function(req
                  );
             });
 
-        } else {alert(2);
-            cordova.exec(successCallback, failure, "AcuantMobileSDK", "activateLicenseKey", [licenseKey]);
+        } else {
+           alert( cordova.exec(successCallback, failure, "AcuantMobileSDK", "activateLicenseKey", [licenseKey]));
         }
     },
     setWidth: function (successCallback, failure, width) {
