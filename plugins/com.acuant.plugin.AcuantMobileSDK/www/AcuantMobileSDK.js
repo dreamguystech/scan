@@ -59,7 +59,7 @@ cordova.define("com.acuant.plugin.AcuantMobileSDK.AcuantMobileSDK", function(req
         }
     }
     module.exports = {
-    initAcuantMobileSDK: function (successCallback, failure, licenseKey, cloudAddress) {
+    initAcuantMobileSDK: function (successCallback, failure, licenseKey, cloudAddress) { 
         if (licenseKey === null) {
             licenseKey = "";
         }
