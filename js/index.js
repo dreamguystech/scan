@@ -495,7 +495,8 @@ var showCameraInterfaceDLBack = function () {
 
 var activateAction = function () {
     log('activateAction');
-    AcuantMobileSDK.activateLicenseKey(success, failure, licenseKey);//alert(success);alert(failure);
+    AcuantMobileSDK.activateLicenseKey(success, failure, licenseKey);
+	alert(success);alert(failure);
 	/*var success = function (data) {  alert("success: " + JSON.stringify(data));
 
         if (data.id == 'mobileSDKWasValidated'){
@@ -570,7 +571,7 @@ var app = {
 
             licenseKey = localStorage.getItem("license-key");
             $("#license-key").val(licenseKey);
-            AcuantMobileSDK.initAcuantMobileSDK(success, failure, licenseKey, null);alert(success);
+            AcuantMobileSDK.initAcuantMobileSDK(success, failure, licenseKey, null);
             AcuantMobileSDK.stringForWatermarkLabel(success, failure, "Powered By Acuant");
 
             //set Customization methods
