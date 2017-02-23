@@ -291,7 +291,7 @@ cordova.define("com.acuant.plugin.AcuantMobileSDK.AcuantMobileSDK", function(req
             });
 
         } else {
-           alert( cordova.exec(successCallback, failure, "AcuantMobileSDK", "activateLicenseKey", [licenseKey]));
+            cordova.exec(successCallback, failure, "AcuantMobileSDK", "activateLicenseKey", [licenseKey]);
         }
     },
     setWidth: function (successCallback, failure, width) {
